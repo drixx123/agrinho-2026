@@ -1,71 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulador de Fazenda Sustentável</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Fazenda Sustentável</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>🌱 Simulador de Fazenda Sustentável</h1>
+    <header>
+        <h1>EcoFazenda</h1>
+        <p>Tome decisões estratégicas e descubra como a sustentabilidade pode aumentar seus lucros!</p>
+    </header>
 
-    <div class="card">
-        <label>Cultura:</label>
-        <select id="cultura">
-            <option value="soja">Soja</option>
-            <option value="milho">Milho</option>
-            <option value="hortalicas">Hortaliças</option>
-        </select>
+    <div class="container">
+        <div class="panel">
+            <h2>Suas Escolhas de Manejo</h2>
+            
+            <div class="form-group">
+                <label for="cultura">Tipo de Cultura:</label>
+                <select id="cultura">
+                    <option value="soja_comum">Soja Monocultura (Tradicional)</option>
+                    <option value="rotacao_graos">Rotação de Culturas (Soja/Milho/Pastagem)</option>
+                    <option value="agrofloresta">Sistema Agroflorestal (Diversificado)</option>
+                </select>
+            </div>
 
-        <label>Manejo do Solo:</label>
-        <select id="solo">
-            <option value="convencional">Convencional</option>
-            <option value="plantio_direto">Plantio Direto</option>
-        </select>
+            <div class="form-group">
+                <label for="solo">Manejo do Solo:</label>
+                <select id="solo">
+                    <option value="arado">Arado Convencional (Revirar a terra)</option>
+                    <option value="direto">Plantio Direto (Palhada protetora)</option>
+                </select>
+            </div>
 
-        <label>Irrigação:</label>
-        <select id="irrigacao">
-            <option value="aspersao">Aspersão</option>
-            <option value="gotejamento">Gotejamento</option>
-        </select>
+            <div class="form-group">
+                <label for="irrigacao">Sistema de Irrigação:</label>
+                <select id="irrigacao">
+                    <option value="aspersao">Aspersão Comum (Alto consumo)</option>
+                    <option value="gotejamento">Gotejamento Eficiente (Direto na raiz)</option>
+                </select>
+            </div>
 
-        <label>Fertilizante:</label>
-        <select id="fertilizante">
-            <option value="quimico">Químico</option>
-            <option value="organico">Orgânico</option>
-        </select>
+            <div class="form-group">
+                <label for="fertilizante">Fertilizantes e Defensivos:</label>
+                <select id="fertilizante">
+                    <option value="quimico">100% Químicos Sintéticos</option>
+                    <option value="integrado">Manejo Integrado (Químico + Orgânico)</option>
+                    <option value="bio">Bioinsumos e Adubação Verde</option>
+                </select>
+            </div>
 
-        <button onclick="simular()">Simular Fazenda</button>
+            <button id="btn-simular">Simular Impacto</button>
+        </div>
+
+        <div class="panel">
+            <h2>Relatório de Impacto</h2>
+            
+            <div class="dashboard">
+                <div class="metric-card prod">
+                    <div>Produtividade</div>
+                    <div id="val-prod" class="metric-value">100%</div>
+                </div>
+                <div class="metric-card lucro">
+                    <div>Lucro Líquido</div>
+                    <div id="val-lucro" class="metric-value">R$ 0</div>
+                </div>
+                <div class="metric-card agua">
+                    <div>Conservação da Água</div>
+                    <div id="val-agua" class="metric-value">100%</div>
+                </div>
+                <div class="metric-card co2">
+                    <div>Redução de CO₂</div>
+                    <div id="val-co2" class="metric-value">0%</div>
+                </div>
+            </div>
+
+            <h2>Análise do Especialista</h2>
+            <div class="feedback-box" id="feedback">
+                Selecione as opções desejadas no menu ao lado e clique em "Simular Impacto" para calcular o balanço ecológico e financeiro da sua fazenda.
+            </div>
+        </div>
     </div>
 
-    <div class="resultado card">
-        <h2>Resultados</h2>
-
-        <p><strong>Produtividade:</strong>
-            <span id="produtividade">-</span>
-        </p>
-
-        <p><strong>Lucro Estimado:</strong>
-            <span id="lucro">-</span>
-        </p>
-
-        <p><strong>Emissões de CO₂:</strong>
-            <span id="co2">-</span>
-        </p>
-
-        <p><strong>Conservação da Água:</strong>
-            <span id="agua">-</span>
-        </p>
-
-        <p><strong>Índice de Sustentabilidade:</strong>
-            <span id="sustentabilidade">-</span>
-        </p>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
