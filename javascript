@@ -15,7 +15,7 @@ function criarPlantas() {
         const planta = document.createElement('div');
         planta.classList.add('planta');
         planta.textContent = '🌱';
-        planta.addEventListener('click', () => {
+planta.addEventListener('click', () => {
             pontos++;
             pontosEl.textContent = pontos;
             planta.style.backgroundColor = '#4caf50';
