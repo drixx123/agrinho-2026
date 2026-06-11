@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dff0d8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tela {
+    text-align: center;
+}
+
+.escondido {
+    display: none;
+}
+
+#campo {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.planta {
+    width: 80px;
+    height: 80px;
+    background-color: #7bc67b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.planta:hover {
+    transform: scale(1.1);
+}
