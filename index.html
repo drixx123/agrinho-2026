@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Fazenda Sustentável</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 Simulador de Fazenda Sustentável</h1>
+
+    <div class="card">
+        <label>Cultura:</label>
+        <select id="cultura">
+            <option value="soja">Soja</option>
+            <option value="milho">Milho</option>
+            <option value="hortalicas">Hortaliças</option>
+        </select>
+
+        <label>Manejo do Solo:</label>
+        <select id="solo">
+            <option value="convencional">Convencional</option>
+            <option value="plantio_direto">Plantio Direto</option>
+        </select>
+
+        <label>Irrigação:</label>
+        <select id="irrigacao">
+            <option value="aspersao">Aspersão</option>
+            <option value="gotejamento">Gotejamento</option>
+        </select>
+
+        <label>Fertilizante:</label>
+        <select id="fertilizante">
+            <option value="quimico">Químico</option>
+            <option value="organico">Orgânico</option>
+        </select>
+
+        <button onclick="simular()">Simular Fazenda</button>
+    </div>
+
+    <div class="resultado card">
+        <h2>Resultados</h2>
+
+        <p><strong>Produtividade:</strong>
+            <span id="produtividade">-</span>
+        </p>
+
+        <p><strong>Lucro Estimado:</strong>
+            <span id="lucro">-</span>
+        </p>
+
+        <p><strong>Emissões de CO₂:</strong>
+            <span id="co2">-</span>
+        </p>
+
+        <p><strong>Conservação da Água:</strong>
+            <span id="agua">-</span>
+        </p>
+
+        <p><strong>Índice de Sustentabilidade:</strong>
+            <span id="sustentabilidade">-</span>
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
